@@ -6,14 +6,14 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: default
+  project: sample-project
   source:
     repoURL: https://github.com/rahelabera/gitops-sample-example.git
     targetRevision: HEAD
     path: argocd/apps
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: sample-dev
   syncPolicy:
     automated:
       prune: true
