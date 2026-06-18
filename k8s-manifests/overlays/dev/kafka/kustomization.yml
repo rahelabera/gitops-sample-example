@@ -24,3 +24,9 @@ patches:
       - op: replace
         path: /metadata/labels/strimzi.io~1cluster
         value: superapp-cluster-dev
+  - target:
+      kind: KafkaNodePool
+    patch: |-
+      - op: replace
+        path: /spec/storage/type
+        value: ephemeral
